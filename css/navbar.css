@@ -1,0 +1,89 @@
+.nav {
+  background-color: #222;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  width: 100%;
+}
+
+/* Brand start */
+.nav-left {
+  display: flex;
+  align-items: center;
+  padding-inline: 1rem;
+  font-size: 2rem;
+  font-weight: var(--fw-black);
+  color: #fff;
+}
+.nav-left span {
+  color: var(--clr-accent1);
+  font-weight: var(--fw-regular);
+  font-size: 1.8rem;
+}
+/* Brand end */
+
+nav ul {
+    --_gap: 4rem;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 700;
+    opacity: .7;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+nav li {
+    padding: calc(var(--_gap) / 4) calc(var(--_gap) / 2);
+    position: relative;
+    overflow: hidden;
+}
+
+nav li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: orangered;
+
+    translate: var(--_translate, 0);
+    scale: var(--_width, 0) 1;
+    transition: 
+        scale 200ms var(--_sd, 0ms),
+        translate 250ms;
+}
+
+nav li:hover ~ li {
+    --_translate: 100%;
+    --_sd: 250ms;
+}
+
+nav:hover li  {
+    --_translate: -100%;
+    --_sd: 250ms;
+}
+
+
+nav li:hover {
+    --_width: 1;
+    --_translate: 0;
+    --_sd: 0ms;
+}
+
+nav ul {
+  flex-direction: row-reverse;
+}

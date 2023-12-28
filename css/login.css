@@ -1,0 +1,91 @@
+.container-specific {
+  min-height: 100vh;
+  background: rgb(0,0,0);
+  background: linear-gradient(124deg, rgba(0,0,0,1) 0%, rgba(87,87,87,1) 100%);
+  padding-top: 5em;
+}
+
+.main-container {
+  border-radius: .625rem;
+  overflow: hidden;
+    background-image: url('../images/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    width: 85vw;
+    margin-inline: auto;
+}
+
+.welcome {
+    color: black;
+    margin-inline: 10%;
+    padding-inline: 1em;
+    margin-block: 5em;
+}
+.welcome h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.welcome p {
+    color: #333;
+    font-size: 1rem;
+    max-width: 450px;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur;
+    text-align: center;
+    padding: 5em 3em;
+    min-height: 80dvh;
+    grid-column: 2/3;
+}
+.login-container h1 {
+    color: #9b54b3;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: 900;
+    margin-bottom: 2em;
+}
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+.login-container .field {
+    color: #6b16f8;
+    border: none;
+    border-radius: 2em;
+    background: #e7e8fd;
+    padding: .4em 1.4em;
+    font-weight: 700;
+}
+
+.login-container button[type=submit] {
+    color: white;
+    margin-top: 2em;
+    display: block;
+    max-width: max-content;
+    padding: .6em 3em;
+    border: none;
+    border-radius: 2em;
+    margin-inline: auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+  background: rgb(227,84,146);
+  background: linear-gradient(90deg, rgba(227,84,146,1) 0%, rgba(81,85,214,1) 100%);
+    cursor: pointer;
+    outline: solid 3px white;
+}
+
+.login-container button[type=submit]:hover {
+    background: white;
+    color: black;
+    outline-color: black;
+    outline-offset: -4px;
+    transition: all 100ms ease-in-out;
+}
